@@ -12,6 +12,8 @@ namespace ProyectoDeCatedra
 {
     public partial class Register : Form
     {
+        ProyectoDataContext obj = new ProyectoDataContext();
+        
         public Register()
         {
             InitializeComponent();
@@ -22,6 +24,15 @@ namespace ProyectoDeCatedra
             this.Hide();
             Form Login = new Login();
             Login.Show(this);
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            int id = 1;
+        obj.RegistrarUsuario(id ,txtNombre.Text, txtNacionalidad.Text, txtCorreo.Text, dFechaNacimiento.Value, txtTelefono.Text, txtGenero.Text, txtPassword.Text, rdbEmpleador.Text);
+
+            
+            id++;
         }
     }
 }

@@ -65,37 +65,30 @@
     <Compile Include="Empresa.Designer.cs">
       <DependentUpon>Empresa.cs</DependentUpon>
     </Compile>
-    <Compile Include="iniciarSesion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="iniciarSesion.Designer.cs">
-      <DependentUpon>iniciarSesion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ofertascs.cs">
+    <Compile Include="Ofertas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ofertascs.Designer.cs">
-      <DependentUpon>Ofertascs.cs</DependentUpon>
+    <Compile Include="Ofertas.Designer.cs">
+      <DependentUpon>Ofertas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proyecto.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Proyecto.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Registro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Registro.Designer.cs">
-      <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="EditarE.resx">
       <DependentUpon>EditarE.cs</DependentUpon>
@@ -106,14 +99,11 @@
     <EmbeddedResource Include="Empresa.resx">
       <DependentUpon>Empresa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="iniciarSesion.resx">
-      <DependentUpon>iniciarSesion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ofertascs.resx">
-      <DependentUpon>Ofertascs.cs</DependentUpon>
+    <EmbeddedResource Include="Ofertas.resx">
+      <DependentUpon>Ofertas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -127,9 +117,6 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registro.resx">
-      <DependentUpon>Registro.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,6 +126,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Proyecto.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Proyecto.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Proyecto.dbml.layout">
+      <DependentUpon>Proyecto.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoDeCatedra
 {
-    partial class Ofertascs
+    partial class Ofertas
     {
         /// <summary>
         /// Required designer variable.

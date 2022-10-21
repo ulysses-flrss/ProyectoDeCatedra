@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Bolsa_Trabajo" Class="ProyectoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ULYSSES;Initial Catalog=Bolsa_Trabajo;Integrated Security=True" SettingsObjectName="ProyectoDeCatedra.Properties.Settings" SettingsPropertyName="Bolsa_TrabajoConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.EditarCandidatos" Method="EditarCandidatos">
+    <Parameter Name="nIdCandidato" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sNombreCandidato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sNacionalidadCandidato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sCorreoCandidato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="dNacimientoUsuario" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="sTelefonoCandidato" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="sGeneroCandidato" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="sPassword" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RegistrarUsuario" Method="RegistrarUsuario">
+    <Parameter Name="nIdUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sNombreUsuario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sNacionalidadUsuario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sCorreoUsuario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="dNacimientoUsuario" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="sTelefonoUsuario" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="sGeneroUsuario" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="sPassword" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="nTipoUsuario" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EditarEmpleadores" Method="EditarEmpleadores">
+    <Parameter Name="nIdEmpleador" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sNombreEmpleador" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sNacionalidadEmpleador" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sCorreoEmpleador" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="dNacimientoEmpleador" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="sTelefonoEmpleador" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="sGeneroEmpleador" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="sPassword" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EditarEmpresas" Method="EditarEmpresas">
+    <Parameter Name="nIdEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sNombreEmpresa" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sDescripcion" Type="System.String" DbType="Text" />
+    <Parameter Name="sTelefono" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="sDireccion" Type="System.String" DbType="NChar(255)" />
+    <Parameter Name="sCorreoEmpresa" Type="System.String" DbType="NChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EditarOfertas" Method="EditarOfertas">
+    <Parameter Name="nIdOferta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nIdEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sTituloOferta" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="fSalario" Type="System.Double" DbType="Float" />
+    <Parameter Name="dFechaPublicacion" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="sDescipcion" Type="System.String" DbType="Text" />
+    <Parameter Name="fechaContratacion" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="nVacantes" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EditarUsuario" Method="EditarUsuario">
+    <Parameter Name="nIdUsuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sNombreUsuario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sNacionalidadUsuario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sCorreoUsuario" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="dNacimientoUsuario" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="sTelefonoUsuario" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="sGeneroUsuario" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="sPassword" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="nTipoUsuario" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EliminarCandidatos" Method="EliminarCandidatos">
+    <Parameter Name="nIdCandidato" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EliminarEmpleadores" Method="EliminarEmpleadores">
+    <Parameter Name="nIdEmpleador" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EliminarEmpresas" Method="EliminarEmpresas">
+    <Parameter Name="nIdEmpresa" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EliminarOfertas" Method="EliminarOfertas">
+    <Parameter Name="nIdOferta" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EliminarUsuario" Method="EliminarUsuario">
+    <Parameter Name="nIdUsuario" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ListarCandidatos" Method="ListarCandidatos">
+    <ElementType Name="ListarCandidatosResult">
+      <Column Name="nIdCandidato" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sNombreCandidato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sNacionalidadCandidato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sCorreoCandidato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dNacimientoCandidato" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sTelefonoCandidato" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="sGeneroCandidato" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="sExperienciaCandidato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ListarEmpleadores" Method="ListarEmpleadores">
+    <ElementType Name="ListarEmpleadoresResult">
+      <Column Name="nIdEmpleador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sNombreEmpleador" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sNacionalidadEmpleador" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sCorreoEmpleador" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dNacimientoEmpleador" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sTelefonoEmpleador" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="sGeneroEmpleador" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="sEmpresaEmpleador" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ListarEmpresas" Method="ListarEmpresas">
+    <ElementType Name="ListarEmpresasResult">
+      <Column Name="nIdEmpresa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sNombreEmpresa" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sDescripcion" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="sTelefono" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="sDireccion" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="sCorreoEmpresa" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ListarOfertas" Method="ListarOfertas">
+    <ElementType Name="ListarOfertasResult">
+      <Column Name="nIdOferta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nIdEmpresa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sTituloOferta" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="fSalario" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="dFechaPublicacion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sDescripcion" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="fechaContratacion" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="nVacantes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ListarUsuarios" Method="ListarUsuarios">
+    <ElementType Name="ListarUsuariosResult">
+      <Column Name="nIdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sNombreUsuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sNacionalidadUsuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sCorreoUsuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dNacimientoUsuario" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sTelefonoUsuario" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="sGeneroUsuario" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="sPassword" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nTipoUsuario" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RegistrarCandidatos" Method="RegistrarCandidatos">
+    <Parameter Name="nIdCandidato" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sNombreCandidato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sNacionalidadCandidato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sCorreoCandidato" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="dNacimientoUsuario" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="sTelefonoCandidato" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="sGeneroCandidato" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="sPassword" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RegistrarEmpleador" Method="RegistrarEmpleador">
+    <Parameter Name="nIdEmpleador" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sNombreEmpleador" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sNacionalidadEmpleador" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="sCorreoEmpleador" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="dNacimientoEmpleador" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="sTelefonoEmpleador" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="sGeneroEmpleador" Type="System.String" DbType="Char(3)" />
+    <Parameter Name="sEmpresaEmpleador" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="sPassword" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RegistrarEmpresas" Method="RegistrarEmpresas">
+    <Parameter Name="nIdEmpresa" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sNombreEmpresa" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sDescripcion" Type="System.String" DbType="Text" />
+    <Parameter Name="sTelefono" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="sDireccion" Type="System.String" DbType="NChar(255)" />
+    <Parameter Name="sCorreoEmpresa" Type="System.String" DbType="NChar(255)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.usuariosID" Method="usuariosID">
+    <ElementType Name="usuariosIDResult">
+      <Column Name="nIdUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

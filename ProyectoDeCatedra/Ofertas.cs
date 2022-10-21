@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoDeCatedra
 {
-    public partial class Ofertascs : Form
+    public partial class Ofertas : Form
     {
-        public Ofertascs()
+        public Ofertas()
         {
             InitializeComponent();
         }

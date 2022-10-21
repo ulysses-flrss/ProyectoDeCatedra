@@ -61,6 +61,7 @@
             this.btnRegister.TabIndex = 0;
             this.btnRegister.Text = "Crear Cuenta";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // txtNombre
             // 
